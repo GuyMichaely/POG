@@ -24,6 +24,7 @@ Me publishing my responses to the Practice of Programming by K&amp;R
 ? }
 ```
 **Response:** 
+
 ```bool isSmaller(char *s, char *t) {
   return strcmp(s, t) < 0;
 }
