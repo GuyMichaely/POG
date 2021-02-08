@@ -16,7 +16,8 @@ Me publishing my responses to the Practice of Programming by K&amp;R
  * `not-eof` is an unnecesarily complicated name. Line 5 should be changed to `isEOF = TRUE` (once `TRUE` is appropriately changed) unless the programmer wishes to squeeze every last bit (pun intended) of performance from their code and comparing to false is more efficient.
 ## Exercise 1-2
 *Improve this function:*
-```? int smaller(char *s, char *t) {
+```
+? int smaller(char *s, char *t) {
 ?   if (strcmp(s, t) < 1)
 ?     return 1;
 ?   else
@@ -25,7 +26,8 @@ Me publishing my responses to the Practice of Programming by K&amp;R
 ```
 **Response:** 
 
-```bool isSmaller(char *s, char *t) {
+```
+bool isSmaller(char *s, char *t) {
   return strcmp(s, t) < 0;
 }
 ```
