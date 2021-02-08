@@ -97,3 +97,19 @@ isQuote = *line == '"';
 ```
 lastBit = val & 1;
 ```
+## Exercise 1-5
+*What is wrong with this excerpt:*
+```
+? int read(int *ip) {
+?   scanf ("%d", ip);
+?   return *ip;
+? }
+? ...
+? insert(&graph[vert] , read(&val) , read(&ch));
+```
+
+**Response:**
+
+ * `read` has side effects via `scanf` and parameter evaluation order is undefined in C. Hence, calling
+ `read` twice as function parameters to `insert` can undesireably swap the order of the values of the parameters of `insert`
+ * `ch` type is implied to be `char` meaning that `&char` is a `char*` whereas `read` requires a `int*`
