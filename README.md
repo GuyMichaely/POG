@@ -67,6 +67,7 @@ if (c != 'y' && c != 'Y')
 int min(int a, int b) {
   return a < b ? a : b;
 }
+
 length = min(length, BUFSIZE);
 ```
 **Fragment:**
