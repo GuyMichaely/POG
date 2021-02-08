@@ -2,6 +2,7 @@
 Me publishing my responses to the Practice of Programming by K&amp;R
 
 ##Exercise 1-1
+
 *Comment on the choice of names and values in the following code*
 ```? #define TRUE 0
 ? #define FALSE 1
