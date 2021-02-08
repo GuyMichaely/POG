@@ -112,4 +112,4 @@ lastBit = val & 1;
 
  * `read` has side effects via `scanf` and parameter evaluation order is undefined in C. Hence, calling
  `read` twice as function parameters to `insert` can undesireably swap the order of the values of the parameters of `insert`
- * `ch` type is implied to be `char` meaning that `&char` is a `char*` whereas `read` requires a `int*`
+ * `ch`'s type is implied to be `char`, meaning that `&char` is a `char*` whereas `read` requires a `int*`
