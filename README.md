@@ -47,6 +47,7 @@ bool isSmaller(char *s, char *t) {
 
 ## Exercise 1-4
 *Improve each of these fragments:*
+
 **Fragment:**
 ```
 ? if ( !(c == 'y' || c == 'Y') )
