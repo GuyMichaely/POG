@@ -32,6 +32,6 @@ bool isSmaller(char *s, char *t) {
 }
 ```
 **Comments:**
- * No need for an int when you're returning a boolean value
+ * No need to return an int if you're returning a boolean value
  * `return strcmp(s, t) < 0` is as clear as what it replaced and is more concise
  * The question code makes the comparison `strcmp(s, t) < 1`, yet the function is named *smaller*. When `strcmp(s, t) == 0`, `s` is not smaller than `t` yet `strcmp(s, t) < 1` is true. The code does not do what its name indicates
