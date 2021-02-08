@@ -44,3 +44,54 @@ bool isSmaller(char *s, char *t) {
 ```
 **Comments:**
  * Lol
+
+## Exercise 1-4
+*Improve each of these fragments:*
+**Fragment:**
+```
+? if ( !(c == 'y' || c == 'Y') )
+?   return;
+```
+**Improved:**
+```
+if (c != 'y' && c != 'Y')
+  return;
+```
+**Fragment:**
+```
+? length = (length < BUFSIZE) ? length: BUFSIZE;
+```
+**Improved:**
+```
+int min(int a, int b) {
+  return a < b ? a : b;
+}
+length = min(length, BUFSIZE);
+```
+**Fragment:**
+```
+? flag = flag ? 0 : 1;
+```
+**Improved:**
+```
+flag = !flag;
+```
+**Fragment:**
+```
+? quote = (*line == '"') ? 1 : 0;
+```
+**Improved:**
+```
+isQuote = *line == '"';
+```
+**Fragment:**
+```
+? if (val & 1)
+?   bit = 1;
+? else
+?   bit = 0;
+```
+**Improved:**
+```
+lastBit = val & 1;
+```
