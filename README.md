@@ -1,4 +1,4 @@
-# POG
+# The Practice of Programming
 Me publishing my responses to the Practice of Programming by K&amp;R
 
 ## Exercise 1-1
