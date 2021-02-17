@@ -202,8 +202,6 @@ for (k = 0; k < 5; k++) {
 ## Exercise 1-8
 *Identify the errors in this Java fragment and repair it by rewriting with an idiomatic loop:*
 
-**Excerpt:**
-
 ```
 ? int count = 0;
 ? while (count < total) {
@@ -214,8 +212,6 @@ for (k = 0; k < 5; k++) {
 ? }
 ```
 
-**Rewritten:**
-
 The error is that we increment count at the beginning of the loop, rather than the end.
 ```
 for (int i = 0; i < total; i++) {
@@ -224,3 +220,15 @@ for (int i = 0; i < total; i++) {
   }
 }
 ```
+
+## Exercise 1-9
+*Identify the problems with this macro definition:*
+
+```
+? #define ISDIGIT(c) ((c >= '0') && (c <= '9')) ? 1 : 0
+```
+
+* If the input to c is an expression which needs to be evaluated, it will be evaluated twice.
+  * This is especially bad if the expression has side effects.
+* The code manually checks whether or not the character is within '0' to '9'. Whether or not a digit is within this range depends on the character encoding, therefore the standard library function `isdigit` should be used.
+* The ternary expression is not parenthesized, so if you wrote, for instance, `ISDIGIT(c) * 2` for some input that would make `ISDIGIT` return 1, you would get `1` rather than the `2` you might be expecting.
