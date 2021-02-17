@@ -216,7 +216,7 @@ for (k = 0; k < 5; k++) {
 
 **Rewritten:**
 
-The error is that we increment count before using it for the first time
+The error is that we increment count at the beginning of the loop, rather than the end.
 ```
 for (int i = 0; i < total; i++) {
   if (this.getName(i) == nametable.userName()) {
