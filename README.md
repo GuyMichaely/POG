@@ -232,3 +232,21 @@ for (int i = 0; i < total; i++) {
   * This is especially bad if the expression has side effects.
 * The code manually checks whether or not the character is within '0' to '9'. Whether or not a digit is within this range depends on the character encoding, therefore the standard library function `isdigit` should be used.
 * The ternary expression is not parenthesized, so if you wrote, for instance, `ISDIGIT(c) * 2` for some input that would make `ISDIGIT` return 1, you would get `1` rather than the `2` you might be expecting.
+
+## Exercise 1-10
+*How would you rewrite these definitions to minimize potential errors? *
+
+```
+? #define FTZMETER  0.3048
+? #define METERZFT  3.28084
+? #define MIZFT     5280.0
+? #define MIZKM     1.609344
+? #define SQMIZSQKM 2.58998
+```
+
+Rewrite macros in terms of previously defined ones:
+
+```
+#define FTZMETER  0.3048
+#define METERZFT  (1 / FTZMETER)
+#define MIZFT     
