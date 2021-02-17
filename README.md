@@ -198,3 +198,29 @@ for (k = 0; k < 5; k++) {
   x += dx;
 }
 ```
+
+## Exercise 1-8
+*Identify the errors in this Java fragment and repair it by rewriting with an idiomatic loop:*
+
+**Excerpt:**
+
+```
+? int count = 0;
+? while (count < total) {
+?   count++;
+?   if (this.getName(count) == nametable.userName()) {
+?     return (true);
+?   }
+? }
+```
+
+**Rewritten:**
+
+The error is that we increment count before using it for the first time
+```
+for (int i = 0; i < total; i++) {
+  if (this.getName(i) == nametable.userName()) {
+    return true;
+  }
+}
+```
