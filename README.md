@@ -133,4 +133,67 @@ All conceivable combinations, because parameter evaluation and side effect order
  * 3 1
  * 3 2
  * 3 3
- 
+
+## Exercise 1-7
+*Rewrite these C/C++ excerpts more clearly:*
+
+**Excerpt:**
+
+```
+? if (istty(stdin)) ;
+?   else if (istty(stdout))) ;
+?     else if (istty(stderr)) ;
+?       else return(0);
+```
+
+**Rewritten:**
+
+```
+if (!istty(stdin) && !istty(stdout) && !istty(stderr)) {
+  return 0;
+}
+```
+
+Or, perhaps:
+
+```
+FILE *pipes[] = {stdin, stdout, stderr};
+int haveTTY = 0;
+for (int i = 0; i < 3; i++) {
+  haveTTY = haveTTY || istty(pipes[i]);
+}
+if (haveTTY == 0) {
+  return 0;
+}
+```
+
+**Excerpt:**
+
+```
+? if (retval != SUCCESS) 
+?   return (retval);
+? }
+? /* All went well! */
+? return SUCCESS;
+```
+
+**Rewritten:**
+
+```
+return retval;
+```
+
+**Excerpt:**
+
+```
+? for (k = 0; k++ < 5; x += dx)
+?   scanf("%lf", &dx);
+```
+
+**Rewritten:**
+
+```
+for (k = 0; k < 5; k++) {
+  scanf("%lf", &dx);
+  x += dx;
+```
