@@ -196,4 +196,5 @@ return retval;
 for (k = 0; k < 5; k++) {
   scanf("%lf", &dx);
   x += dx;
+}
 ```
