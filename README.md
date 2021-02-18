@@ -253,3 +253,38 @@ Rewrite macros in terms of previously defined ones:
 #define MIZKM     (FTZMETER * MIZFT / 1000)
 #define SQMIZSQKM (MIZKM * MIZKM)
 ```
+
+## Exercise 1-11
+*Comment on these comments:*
+
+```
+? void dict::insert(string& w)
+? // returns 1 if w in dictionary, otherwise returns 0
+```
+Innacurrate, as the type signature states that the function returns void. The comment seems to be about a dict membership function.
+
+```
+? if (n > MAX || n % 2 > 0) // test for even number
+```
+
+Innaccurate and perhaps superfluous. The comment just says "test for even number", but the code also checks that `n` is less than `MAX`. Furthemore, the condition for parity is true when n is odd, not even like the comment implies. The code is simple enough that the comment may not be neccesary.
+
+```
+? // Write a message
+? // Add line to counter for each line written
+? 
+? void write_message()
+? {
+?   // increment line counter
+?   line_number = line_number + 1;
+?   fprintf(fout, "%d %s\n%d %s\n%d $s\n,
+?     line_number, HEADER,
+?     line_number + 1, BODY,
+?     line_number + 2, TRAILER);
+?   // increment line counter
+?   line_number = liner_number + 2;
+?   }
+```
+The first comment section is perhaps slightly vague. What message does the function write? What is counter? The second question may be clear with more familiarity with the code, and by the use of `line_number` in the comment we can assume counter is `line_number`, so at the least I would change `counter` to `line_number`. The second comment section is unnecesary, as is the third which is also innaccurate, as incrementing implies incrementing by one under normal circumstances.
+
+I would also appreciate a small comment before `fprintf` stating the nature of the message being printed.
