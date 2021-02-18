@@ -234,7 +234,7 @@ for (int i = 0; i < total; i++) {
 * The ternary expression is not parenthesized, so if you wrote, for instance, `ISDIGIT(c) * 2` for some input that would make `ISDIGIT` return 1, you would get `1` rather than the `2` you might be expecting.
 
 ## Exercise 1-10
-*How would you rewrite these definitions to minimize potential errors? *
+*How would you rewrite these definitions to minimize potential errors?*
 
 ```
 ? #define FTZMETER  0.3048
