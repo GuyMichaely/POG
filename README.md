@@ -249,4 +249,7 @@ Rewrite macros in terms of previously defined ones:
 ```
 #define FTZMETER  0.3048
 #define METERZFT  (1 / FTZMETER)
-#define MIZFT     
+#define MIZFT     5280.0
+#define MIZKM     (FTZMETER * MIZFT / 1000)
+#define SQMIZSQKM (MIZKM * MIZKM)
+```
